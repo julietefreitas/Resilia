@@ -1,85 +1,159 @@
-header {
-    background: black;
-    width: 100%;
-    height: 60px;
-    margin-top:0px;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    font-family: Raleway;
-}
-header .itemnavegador {
-    display: flex;
-    margin-bottom: 6px;
+.cabecalho {
+	height: 60px;
+	display: flex;
+	justify-content: space-around;
+	font-family: Raleway;
+	background: black;
+	align-items: flex-end;
 }
 header .logoresilia {
-    color: yellow;
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 4px;
+	color: yellow;
+	font-size: 40px;
+	font-weight: bold;
+	bottom: 5px;
 }
-.item {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: black;
-    margin-left: 15px;
-    background: yellow;
-    text-decoration: none;
-    border-radius: 4px;
-    width: 80px;
-    text-align: center;
-    height: 20px;
+.itemnavegador {
+	display: flex;
+	width: auto;
+	margin-bottom: 5px;
 }
-body {
-    display: inline;
+.itemheader {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: black;
+	margin-left: 15px;
+	background: yellow;
+	text-decoration: none;
+	border-radius: 4px;
+	font-size: 16px;
+	width: auto;
+	text-align: center;
+	padding: 2px 20px;
 }
+.itemheader:hover {
+	background: #FFFFFF;
+	color:black;
+}
+.imagens_filmes:active{
+	transition: 0.3s;
+}
+
+/*.itemheader:active {
+	font-size: 18px;
+	background: #FFFFFF;
+}*/
+/*body {
+	background: red;
+}*/
 main {
-    height: 1000px;
+	height: auto;
+	width: 100%;
 }
 .gridfilmes {
-    display: flex;
-    text-align: center;
-    justify-content: space-around;
+	display: flex;
+	justify-content: center;
 }
 .filmes {
-    display: flex;
-    text-align: center;
-    margin-top: 30px;
-    height: auto;
-    width: 80%;
-    justify-content: center;
+	display: flex;
+	margin-top: 30px;
+	height: auto;
+	width: 50%;
+	justify-content: center;
+	flex-wrap: wrap;
+	text-align: center;
 }
 
 .organizacaoimagens {
-    width: 25%;
-    padding: 15px;
+	width: 25%;
 }
 .imagens_filmes {
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
+	border-radius: 10px;
+	max-width: 80%;
+	max-height: 80%;
 }
-@font-face {
-    font-family: Raleway;
-    src: url("Raleway-Bold.ttf");
-}
-footer {
-    width: 100%;
-    text-align: center;
-    background:yellow;
-    border: 2px solid yellow;
-    margin-bottom: 0px;
+.imagens_filmes:active{
+	transition: 0.3s;
 }
 
-.imagens {
-    color: yellow;
-    width: 50px;
-    height: 50px;
-    padding: 5px;
+@font-face {
+	font-family: Raleway;
+	src: url("Raleway-Bold.ttf");
 }
-.items p {
-    font-family: Raleway;
-    font-size: 20px;
-    text-align: center;
-    padding: 7px;
-    
+footer {
+	position: relative;
+	width: auto;
+	text-align: center;
+	background:yellow;
+	border: 2px solid yellow;
+	margin-bottom: 0px;
 }
+.imagensfooter {
+	color: yellow;
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+}
+.iconesfooter p {
+	font-family: Raleway;
+	font-size: 20px;
+	text-align: center;
+	padding: 7px;
+	
+}
+
+
+/*parte mobile*/
+@media (min-width: 320px)and (max-width: 800px) {
+	
+	header .logoresilia {
+		margin-top: 10px;
+	}
+	.cabecalho {
+		flex-direction: column;
+		height: auto;
+		width: 100%;
+		align-items: center;
+		
+	}
+	.itemnavegador {
+		width: 100%;
+		flex-direction: column;
+		padding: 5px;
+		align-items: center;
+		
+	}
+	.itemheader {
+		width: 50%;
+		padding: 2px;
+		margin: 4px;
+	}
+	main {
+		height: auto;
+	}
+	.filmes {
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		align-items: center;
+		align-content: space-between;
+	}
+	.organizacaoimagens{
+		width: 100%;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.imagens_filmes {
+		width: 50%;
+		height: 50%;
+	}
+	.iconesfooter {
+		width: 100%;
+	}
+	.imagensfooter {
+		width: 25px;
+		height: 25px;
+	}
+}
+/*@media (max-width: 500px) {
+	display: flex;
+	flex-direction: column;
+}*/
