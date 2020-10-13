@@ -1,0 +1,41 @@
+body {
+  background-color: black;
+ 
+}
+
+.formulario {
+  display: flex;
+  margin-top:50px;
+  width: auto;
+  flex-direction: column;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  align-items: center;
+}
+.texto {
+  font-size: 18px;
+  width: 25%;
+  color: #FFFFFF;
+}
+.entrada {
+  width: 25%;
+  height: 25px;
+}
+.button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  width: 25%;
+}
+
+.finalPage{
+  text-align: center;
+  margin-bottom: 0px;
+  background-color: yellow;
+}
+.imagensfooter {
+  width: 25px;
+}
+.paragrafoFinal {
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

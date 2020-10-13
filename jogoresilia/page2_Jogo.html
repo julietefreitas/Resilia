@@ -1,0 +1,65 @@
+<meta charset="UTF-8">
+<link rel = "stylesheet" href = "page2.css">
+<body>
+  <p class = "paragrafo">Você está no Jogo Apocalipse Zumbi</p>
+  <p class = "paragrafo">Você está no Jogo Apocalipse Zumbi</p>
+  <p class = "paragrafo">Você está no Jogo Apocalipse Zumbi</p>
+  <p class = "paragrafo">Você está no Jogo Apocalipse Zumbi</p>
+  <p class = "paragrafo">Você está no Jogo Apocalipse Zumbi</p>
+
+<script>
+  var jogo = parseInt(prompt("Você acaba de acordar e descobrir que está num Apocalipse Zumbi\nO que deseja fazer?\n1- Tá doido, vou é sair de casa\n2- Continuar em Casa"));
+  if (jogo == 1) {
+    var escolha = parseInt(prompt("Você agora está no portão\nO que deseja fazer?\n1-Andar até o abrigo mais próximo\n2-Pensei melhor, vou é voltar pra casa"));
+    if (escolha == 1){
+      var escolha2 = parseInt(prompt("Esta escolha requer que você tome cuidados..\nAgora você está no primeiro quarteirão. A ajuda mais próxima é daqui 3 quarteirões\nO que deseja fazer?\n1-Continuar Andando\n2-Vou ficar aqui esperando a ajuda chegar"));
+      if (escolha2 == 1) {
+        var escolha3 = parseInt(prompt("Boa!Percebi que você é corajoso(a)\nMas toma cuidado,avistei daqui que tem um zumbi mais pra frente\nO que você quer fazer?\n1-Ih,acabo com ele facin\n2-Ir por outro caminho e evitar o zumbi"));
+        if( escolha3 == 1) {
+          var escolha4 = parseInt(prompt("Que isso ein, tu conseguiu.\nAgora falta pouco!!Você está quase lá\n1-Hoje eu tô corajoso(a), vou até o final\n2-Tô pensando em voltar atrás"));
+          if (escolha4 == 1){
+            var escolha5= parseInt(prompt("Agora tu tá em frente ao 3º quarteirão\nO que deseja fazer?\n1-Correr varado e chegar sem ser visto\n2-Ih, to tranquilo(a),tem zumbi mais não!"));
+            if (escolha5 ==1 ) {
+              alert("Aii, tu venceuu, Parabeéns!\nCorreu tão rápido que ninguém te pegouu >.< WINNERRRRRRR!!");
+            }else{
+              alert("Ai, tu deu molin, deveria ter corrido mais! PERDEUUUUU !!1 :'(");
+            }
+          }else {
+            var escolha6= parseInt(prompt("Agora é contigo\n1-Recomeçar o jogo\n2-Parar"));
+            if (escolha6 == 1) {
+              setTimeout(function () {
+                window.location.href = "page1_Jogo.html";
+              },3000);
+            }else{
+              alert("Poxa,então Tchauu!!Obrigada por ter participado!");
+            }
+          }
+        }else {
+          alert("Aí, tu errou feio, tem zumbi por todo lugar!!\nVocê acaba de perder, sem chances!!");
+        }
+      }else {
+        alert("Tu é doido(a) cara kkkkk, ninguém vai aparecer pra te ajudar\n É UM APOCALIPSE ZUMBIIIII!!!\nVocê acaba de ser pego!");
+      }
+    }else { 
+    alert("Mano, queria te falar não, mas os zumbis já estão na sua porta.\nVocê infelizmente vai MORRER!!!");
+    var escolher= parseInt(prompt("Vamo lá, vou te dar outra chance\n1-Deseja recomeçar o Jogo?\n2-Cansei dessa droga"));
+      if (escolher == 1) {
+        setTimeout(function () {
+        window.location.href = "page1_Jogo.html";
+        },3000);
+      }else {
+        alert("Ialá,então tá bom!\nObrigada pela sua participação!");
+      }
+    }
+    }else {
+    var escolha7= parseInt(prompt("Péssima Escolha >>>\nEm poucos minutos os zumbis chegarão até você... PERDEU, infelizmente!\nVou te dar outra chance\n1-Voltar a jogar\n2-Bolei, quero mais não!"));
+    if (escolha7 == 1) {
+      setTimeout(function () {
+        window.location.href = "page1_Jogo.html";
+      },3000);
+    }else {
+      alert("Poxa,então Tchauu!!Obrigada por ter participado!");
+    }
+  }
+</script>
+</body>

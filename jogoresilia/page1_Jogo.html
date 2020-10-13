@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel = "stylesheet" href = "style.css">
+  <link rel = "stylesheet" href = "reset.css">
+  <title>Jogo Joguinho</title>
+</head>
+<body class = "corpo">
+  <form  class = "formulario" action="jogo_resilia">
+    <label class = "texto" for="fname">First name:</label><br>
+    <input class = "entrada" type="text" id="fname" name="fname"><br>
+    <label class = "texto" for="lname">Last name:</label><br>
+    <input class = "entrada" type="text" id="lname" name="lname"><br><br>
+    <button class = "button" id="botao">Jogar</button>
+  </form>
+
+  <script>
+    function mostrarAlerta () {
+      //var body = document.querySelector("body");
+      //body.innerHTML += `style = "background-color:yellow"`;
+      //document.write(`<body style= "background-color:yellow">``</body>`)
+      var nome = document.querySelector("#fname");
+      alert("Seja bem vindo(a) "+ nome.value);
+      document.write(`<p style= "font-size:20px; font-family: Segoe UI; font-weight: bold;">`+ "Está preparado(a)\n?Vamos começar......"+ `</p>`);
+      setTimeout(function () {
+        window.location.href = "page2_Jogo.html";
+      },3000);
+    }
+    function comecar () {
+      var botao = document.querySelector("#botao");
+      botao.onclick = mostrarAlerta;
+    }
+    comecar ();
+  </script>
+
+</body>
+
+</html>
