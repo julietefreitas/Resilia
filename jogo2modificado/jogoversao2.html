@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id = "div">
+    <h2 id = "h2"> Joguinho Resilia</h2>
+    <p id ="paragrafo">Vamos Começar?</p>
+    <p id="paragrafo2">1-Harry Potter<br>2-Hermione Granger<br>3-Roni Wesley<br></p>
+    <form id = "formulario">
+      <input type="text" id="input" name="escolha" value=""><br>
+    </form>
+    <br>
+    <img id = "imagem" src="https://media.giphy.com/media/gbErpwcLlizvi/giphy.gif">
+    <br><br>
+    <button id="botao" onclick="comecar()">Começar</button>
+  </div>
+  <script>
+    function comecar() {
+      var input = document.getElementById("input");
+      if (input.value == "1" || input.value == "Harry Potter"){
+        //console.log("aqui");
+        chamarHarry();
+        // chamar funcoes
+      }else if (input.value == "Hermione Granger"){
+        // chamar funcoes
+      }else if (input.value == "Roni Wesley") {
+        // chamar funcoes
+      } else {
+        alert("Esse personagem não existe");
+      }
+    }
+
+    function chamarHarry () {
+      var div = document.getElementById("div")
+      //var divisao = document.getElementById("divisao");
+      //var h2 = document.getElementById("h2").innerHTML = "Você está na primeira Fase"
+      //var p = document.getElementById("paragrafo").textContent = "Olá Harry Potter, você tem uma tarefa de encontrar uma horcrux"; 
+      //var p1 = document.getElementById("paragrafo2").innerHTML = "Escolha um ajudante pra esta tarefa\n1-Hermione\n2-Rony Wesley"
+      //var imagem = document.getElementById("imagem").textContent = "https://tenor.com/view/ron-weasley-hermione-harry-potter-love-pair-gif-4901525";
+      //imagem.src = "https://tenor.com/view/ron-weasley-hermione-harry-potter-love-pair-gif-4901525";
+      //var botao = document.getElementById("botao").innerHTML = "Próximo"
+      //div.innerHTML = ``
+      div.innerHTML = `<h2>Você está na primeira fase</h2>
+                       <p>Olá Harry, você está atrás de uma horcrux</p>
+                       <p>Escolha seu parceiro:1-Hermione2-Rony Wesley</p>
+                       <img src="https://media.giphy.com/media/mz1kJeDVueKC4/giphy.gif"><br>
+                       <input type="text" id="input" name="escolha" value=""><br><br>
+                       <button onclick = "verificaPersonagem()">Próximo</button>`
+
+    }
+
+    function verificaPersonagem () {
+      var input = document.getElementById("input");
+      if(input.value == "1") {
+        div.innerHTML  = `<h2>Você está na segunda fase</h2>
+                          <p>Hermione avistou um dementador,o que deseja fazer?</p>
+                          <p>1-Expectro Patronum 2-Pernas pra que te quero</p>
+                          <img src="https://64.media.tumblr.com/tumblr_ma4ilyqLfp1rug15po1_500.gif"><br>
+                          <input type="text" id="input" name="escolha" value=""><br><br>
+                          <button onclick = "verificaPersonagem()">Próximo</button> `
+                          
+                          if(input.value == "1") {
+                            div.innerHTML = `<h2>Você passou de fase</h2>
+                                            <p></p>
+                                            <p>1-Expectro Patronum 2-Pernas pra que te quero</p>
+                                            <img src="https://64.media.tumblr.com/tumblr_ma4ilyqLfp1rug15po1_500.gif"><br>
+                                            <input type="text" id="input" name="escolha" value=""><br><br>
+                                            <button onclick = "verificaPersonagem()">Próximo</button> `
+                          }
+                          
+      }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /* var div = document.getElementById("div")
+      var divisao = document.getElementById("divisao");
+      var h2 = document.getElementById("h2").innerHTML = "Você está na primeira Fase"
+      var p = document.getElementById("paragrafo").innerHTML = "Escolha um personagem"; */
+      //var botao = document.getElementById("botao").innerHTML = "Próximo"
+      
+      
+
+      //document.body.appendChild(divisao);
+      //botao.onclick = teste();
+      //divisao.innerHTML =`<button id="botao" onclick="teste()">Hello</button>`
+    
+
+    /* function teste () {
+      divisao.style.border = "2px solid red";
+      divisao.style.width = "50%";
+      divisao.style.height = "300px";
+      divisao.style.border = "2px solid black";
+      var botao = document.getElementById("botao");
+      //botao.innerHTML = "Próxima Fase";
+      botao.style.marginTop = "40px";
+      //divisao.remove();
+     // var div = document.querySelector();
+      
+
+    } */
+
+
+
+  </script>
+</body>
+</html>
