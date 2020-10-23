@@ -1,0 +1,89 @@
+@font-face {
+  font-family: harrypotter;
+  src: url(harryp.TTF);
+
+}
+
+body {
+  display: flex;
+  font-family: harrypotter;
+  font-size: 40px;
+  font-weight: bold;
+}
+button {
+  font-family: harrypotter;
+  font-size: 30px;
+  width: 20%;
+  background-color: #C3C2B4;
+  border-radius: 6px;
+  margin-right: 4px;
+}
+button:hover {
+  background: brown;
+  color: #ebb93d;
+}
+
+#div {
+  background-image: url(trioharry.jpg);
+  text-align: center;
+  margin-left: 350px;
+  margin-top: 10px;
+  border: 4px dashed black;
+  border-radius: 4px;
+  width: 50%;
+  height: 25%;
+  bottom: 4px;
+}
+#div:hover {
+  border-color: brown;
+
+}
+
+div #h2 {
+  margin: 15px;
+}
+div #paragrafo {
+  padding: -5px;
+}
+
+div .imagensDiv {
+  position: absolute;
+  width:10%;
+  right: 0;
+  bottom: 0px;
+}
+.imagem {
+  width: 80%;
+  height: 50%;
+  bottom: 5px;
+}
+
+#botaoprimeiratela {
+  margin-bottom: 40px;
+  font-size: 40px;
+  width: auto;
+  padding: 5px;
+}
+
+#imagemprimeiratela{
+  width: 250px;
+  height: 250px;
+ 
+}
+
+#dementador {
+  margin-bottom: 20px;
+}
+
+div #hermionegranger {
+  width: 50%;
+  height: 50%;
+  bottom: 30px;
+}
+#leviosa {
+  width: 40%;
+  height: 400px;
+}
+
+
+

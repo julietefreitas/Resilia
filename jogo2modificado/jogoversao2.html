@@ -1,40 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <link rel= "stylesheet" href = "style.css">
   <title>Document</title>
 </head>
 <body>
   <div id = "div">
     <h2 id = "h2"> Joguinho Resilia</h2>
     <p id ="paragrafo">Vamos Começar?</p>
-    <p id="paragrafo2">1-Harry Potter<br>2-Hermione Granger<br>3-Roni Wesley<br></p>
-    <form id = "formulario">
+    <p id ="paragrafo">Escolha seu personagem</p>
+    <button onclick = chamarHarry()>Harry Potter</button>
+    <img class = "imagensDiv" src = "vassoura.png"> 
+    <!-- <form id = "formulario">
       <input type="text" id="input" name="escolha" value=""><br>
-    </form>
-    <br>
+    </form> -->
+    <br><br>
     <img id = "imagem" src="https://media.giphy.com/media/gbErpwcLlizvi/giphy.gif">
     <br><br>
-    <button id="botao" onclick="comecar()">Começar</button>
   </div>
   <script>
     function comecar() {
-      var input = document.getElementById("input");
-      if (input.value == "1" || input.value == "Harry Potter"){
-        //console.log("aqui");
-        chamarHarry();
-        // chamar funcoes
-      }else if (input.value == "Hermione Granger"){
-        // chamar funcoes
-      }else if (input.value == "Roni Wesley") {
-        // chamar funcoes
-      } else {
-        alert("Esse personagem não existe");
-      }
+      var div = document.getElementById("div");
+      div.innerHTML = `<h2 id = "h2">Joguinho Resilia</h2>
+                       <p>Vamos comecar?</p>
+                       <p>Escolha seu personagem</p>
+                       <button id= "botaoprimeiratela" onclick ='chamarHarry()'>Harry Potter</button>
+                       <img class = "imagensDiv" src = "vassoura.png">
+                       <br>
+                       <img id = "imagem"src="https://media.giphy.com/media/gbErpwcLlizvi/giphy.gif"><br>`  
     }
+    
 
     function chamarHarry () {
-      var div = document.getElementById("div")
+      var div = document.getElementById("div");
       //var divisao = document.getElementById("divisao");
       //var h2 = document.getElementById("h2").innerHTML = "Você está na primeira Fase"
       //var p = document.getElementById("paragrafo").textContent = "Olá Harry Potter, você tem uma tarefa de encontrar uma horcrux"; 
@@ -43,38 +42,68 @@
       //imagem.src = "https://tenor.com/view/ron-weasley-hermione-harry-potter-love-pair-gif-4901525";
       //var botao = document.getElementById("botao").innerHTML = "Próximo"
       //div.innerHTML = ``
-      div.innerHTML = `<h2>Você está na primeira fase</h2>
-                       <p>Olá Harry, você está atrás de uma horcrux</p>
-                       <p>Escolha seu parceiro:1-Hermione2-Rony Wesley</p>
-                       <img src="https://media.giphy.com/media/mz1kJeDVueKC4/giphy.gif"><br>
-                       <input type="text" id="input" name="escolha" value=""><br><br>
-                       <button onclick = "verificaPersonagem()">Próximo</button>`
-
+      div.innerHTML = `<h2 id = "h2">Primeira Fase</h2>
+                       <p>Olá Harry, a sua tarefa neste jogo eh achar uma horcrux</p>
+                       <p>Escolha seu parceiro</p>
+                       <button id= "botaoprimeiratela" onclick ='chamarHermione()'>Hermione</button>
+                       <button id= "botaoprimeiratela" onclick = 'chamarRonWesley()'>Ron Wesley</button>
+                       <img class = "imagensDiv" src = "vassoura.png">
+                       <div>
+                        <img id = "imagemprimeiratela"src="https://media.giphy.com/media/mz1kJeDVueKC4/giphy.gif"><br>
+                      </div>`  
     }
 
-    function verificaPersonagem () {
-      var input = document.getElementById("input");
-      if(input.value == "1") {
-        div.innerHTML  = `<h2>Você está na segunda fase</h2>
+    function chamarHermione () {
+        div.innerHTML  = `<h2 id = "h2">Segunda Fase</h2>
                           <p>Hermione avistou um dementador,o que deseja fazer?</p>
-                          <p>1-Expectro Patronum 2-Pernas pra que te quero</p>
-                          <img src="https://64.media.tumblr.com/tumblr_ma4ilyqLfp1rug15po1_500.gif"><br>
-                          <input type="text" id="input" name="escolha" value=""><br><br>
-                          <button onclick = "verificaPersonagem()">Próximo</button> `
-                          
-                          if(input.value == "1") {
-                            div.innerHTML = `<h2>Você passou de fase</h2>
-                                            <p></p>
-                                            <p>1-Expectro Patronum 2-Pernas pra que te quero</p>
-                                            <img src="https://64.media.tumblr.com/tumblr_ma4ilyqLfp1rug15po1_500.gif"><br>
-                                            <input type="text" id="input" name="escolha" value=""><br><br>
-                                            <button onclick = "verificaPersonagem()">Próximo</button> `
-                          }
+                          <button id= "botaoprimeiratela" onclick ='ganhouFeitico()'>Expectro Patronum</button>
+                          <button id= "botaoprimeiratela" onclick = 'perdeuFeitico()'>Reducto</button>
+                          <img class = "imagensDiv" src = "vassoura.png"><br>
+                          <img id = "dementador" src="https://64.media.tumblr.com/tumblr_ma4ilyqLfp1rug15po1_500.gif"><br>`          
                           
       }
+      function ganhouFeitico (){
+        div.innerHTML  = `<h2 id = "h2">Terceira Fase</h2>
+                          <p>Mandou bem com esse feitico</p>
+                          <p>Agora siga Hermione, mais na frente tem uma porta,voce precisa usar um feitico para abrir</p>
+                          <button id= "botaoprimeiratela" onclick ='ganhouFeitico'>Leviosa</button>
+                          <button id= "botaoprimeiratela" onclick = 'naoleviosa()'>LevioSAR</button>
+                          <img class = "imagensDiv" src = "vassoura.png">
+                          <div>
+                            <img id = "leviosa" src="https://media.giphy.com/media/iIqcyjsrIhxK0/giphy.gif"><br>        
+                          </div>`
+      }
+      function perdeuFeitico(){
+        div.innerHTML  = `<h2 id = "h2">Infelizmente você usou o feitico errado</h2>
+                          <p>E acaba de perder!</p>
+                          <button id= "botaoprimeiratela" onclick ='comecar()'>Voltar a Jogar</button>
+                          <a href ="https://www.aficionados.com.br/feiticos-harry-potter-traduzidos-explicados/"><button id= "botaoprimeiratela" onclick = 'perdeuFeitico()'>Preciso treinar mais</button></a>
+                          <img class = "imagensDiv" src = "vassoura.png">
+                          <div>
+                            <img id = "hermionegranger" src="https://media.giphy.com/media/xSS0vcjoQM8KY/giphy.gif"><br>       
+                          </div>`
+      }
+      function leviosa () {
 
-    }
+      }
 
+      function naoleviosa () {
+        div.innerHTML  = `<h2 id = "h2">Você empacou nesta fase</h2>
+                          <p>Usou o feitico errado</p>
+                          <p>O que deseja fazer?</p>
+                          <button id= "botaoprimeiratela" onclick ='ganhouFeitico'></button>
+                          <button id= "botaoprimeiratela" onclick = 'naoleviosa()'>Leviosaaa</button>
+                          <img class = "imagensDiv" src = "vassoura.png">
+                          <div>
+                            <img id = "harryehermione" src="https://media.giphy.com/media/DTXfEpAC8AHlu/giphy.gif"><br>        
+                          </div>`
+      }
+      
+
+      function chamarRonWesley () {
+        
+      }
+    
 
 
 
