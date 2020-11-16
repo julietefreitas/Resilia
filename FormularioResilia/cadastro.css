@@ -1,0 +1,12 @@
+body {
+    background: #dde003;
+}
+
+body h2 {
+    font-family: Raleway;
+    font-size: 30px;
+}
+@font-face {
+	font-family: Raleway;
+	src:url(Raleway-Bold.ttf);
+}
