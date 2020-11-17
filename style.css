@@ -79,8 +79,9 @@ main {
 	src: url("Raleway-Bold.ttf");
 }
 footer {
-	position: relative;
-	width: auto;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
 	text-align: center;
 	background:yellow;
 	border: 2px solid yellow;
