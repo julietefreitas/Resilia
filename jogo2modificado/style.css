@@ -5,10 +5,11 @@
 }
 
 body {
-  display: flex;
+ 
   font-family: harrypotter;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
+  background-image: url(planodefundo.jpeg);
 }
 button {
   font-family: harrypotter;
@@ -22,21 +23,26 @@ button:hover {
   background: brown;
   color: #ebb93d;
 }
-
-#div {
-  background-image: url(trioharry.jpg);
+#container {
   text-align: center;
-  margin-left: 350px;
-  margin-top: 10px;
-  border: 4px dashed black;
-  border-radius: 4px;
+  display: inline-block;
   width: 50%;
-  height: 25%;
+}
+#div {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  margin-top: 150px;
+  text-shadow: black 4px 4px 4px;
+  color: #FFFFFF;
+  border: 4px dashed brown;
+  border-radius: 4px;
+  width: auto;
+  height: auto;
   bottom: 4px;
+  padding: 5px;
 }
 #div:hover {
   border-color: brown;
-
 }
 
 div #h2 {
@@ -52,9 +58,9 @@ div .imagensDiv {
   right: 0;
   bottom: 0px;
 }
-.imagem {
-  width: 80%;
-  height: 50%;
+#imagem {
+  width: 50%;
+  height: 250px;
   bottom: 5px;
 }
 
@@ -68,7 +74,7 @@ div .imagensDiv {
 #imagemprimeiratela{
   width: 250px;
   height: 250px;
- 
+  margin-bottom: 5px;
 }
 
 #dementador {
@@ -83,6 +89,11 @@ div #hermionegranger {
 #leviosa {
   width: 40%;
   height: 400px;
+}
+
+#filch {
+  width: 30%;
+  height: 250px;
 }
 
 
